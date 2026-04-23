@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Rescue Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .option {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .option-header {
+            background-color: green; /* Peach/orange for cats */
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .option-header:hover {
+            background-color:green;
+        }
+        
+        .option-content {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+        }
+        
+        .option.active .option-content {
+            padding: 15px;
+            max-height: 1000px;
+        }
+        
+        .rescue-steps {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        .rescue-steps li {
+            margin-bottom: 8px;
+        }
+        
+        .pdf-container {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #FFF0E5; /* Light peach background */
+            border-radius: 8px;
+            border: 1px dashed #FF9966;
+        }
+        
+        .pdf-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #FF9966;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .pdf-link:hover {
+            background-color: #E07D44;
+        }
+        
+        .arrow {
+            transition: transform 0.3s;
+            font-size: 14px;
+        }
+        
+        .active .arrow {
+            transform: rotate(90deg);
+        }
+        
+        .emergency-contact {
+            background-color: #FFF0E5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 4px solid #FF9966;
+        }
+        
+        .warning {
+            color: #FF5500;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🐱 Cat Rescue Guide</h1>
+    
+    <div class="option" id="optionA">
+        <div class="option-header">
+            <span>🚑 Injured Cat Rescue</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p class="warning">⚠ Cats hide pain well—assume any injured cat may bite or scratch!</p>
+            <p><strong>First aid for injured cats:</strong></p>
+            <ol class="rescue-steps">
+                <li>Approach slowly while speaking softly—avoid direct eye contact</li>
+                <li>Use a thick towel or blanket to gently wrap the cat (like a burrito)</li>
+                <li>Check for bleeding, labored breathing, or limping</li>
+                <li>For bleeding: apply pressure with clean gauze (avoid cotton)</li>
+                <li>Never give human medication—cats metabolize drugs differently</li>
+                <li>Transport in a covered carrier to reduce stress</li>
+            </ol>
+            <div class="emergency-contact">
+                <strong>Emergency Contacts:</strong><br>
+                ASPCA Poison Control: (888) 426-4435<br>
+                Feline Emergency Hotline: [Your Local Cat Rescue Number]
+            </div>
+        </div>
+    </div>
+    
+    <div class="option" id="optionB">
+        <div class="option-header">
+            <span>🔥 Cat in Heat or Fire Emergency</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>If a cat is overheating or in a fire:</strong></p>
+            <ol class="rescue-steps">
+                <li>Look for panting, drooling, or bright red gums (heatstroke signs)</li>
+                <li>Cool paws and ears with <strong>room-temperature</strong> water (never ice)</li>
+                <li>Offer small amounts of water—cats won't drink when stressed</li>
+                <li>In fires: check hiding spots (under beds, closets) as cats hide</li>
+                <li>Use a pillowcase as an emergency carrier if needed</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionC">
+        <div class="option-header">
+            <span>🌳 Tree or High Place Rescue</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Helping a cat stuck in a tree or high place:</strong></p>
+            <ol class="rescue-steps">
+                <li>Most cats <strong>can</strong> climb down—give them 24 hours to try</li>
+                <li>Place strong-smelling food (tuna, sardines) at the base</li>
+                <li>Call professionals—cat claws make ladder rescues dangerous</li>
+                <li>If the cat is crying non-stop or injured, act faster</li>
+                <li>Never use water hoses or loud noises—this may cause panic falls</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionD">
+        <div class="option-header">
+            <span>🚗 Stray or Hit-by-Car Cat</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Helping a cat on the road:</strong></p>
+            <ol class="rescue-steps">
+                <li>Park safely—cats often bolt when approached</li>
+                <li>Use a carrier or box—never hold a scared cat in your arms</li>
+                <li>Check for "tipped ears" (sign of a neutered feral cat)</li>
+                <li>For injured cats: slide cardboard under them before moving</li>
+                <li>Even friendly cats may need 2-3 days to calm down</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="pdf-container">
+        <h3>📚 Download the Complete Cat Rescue Guide</h3>
+        <p>Includes:</p>
+        <ul style="text-align: left; display: inline-block; margin: 10px auto;">
+            <li>🩹 Cat-Specific First Aid</li>
+            <li>📞 Feline Emergency Contacts</li>
+            <li>⚠ Handling Feral Cats Safely</li>
+            <li>🐾 Behavior Tips for Scared Cats</li>
+        </ul>
+        <a href="https://humanepro.org/sites/default/files/documents/rescue-best-practice-guide.pdf " class="pdf-link" target="_blank">Download Full Cat Rescue PDF</a>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.option-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const option = header.parentElement;
+                option.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

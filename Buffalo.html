@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buffalo Rescue Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .option {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .option-header {
+            background-color: green; /* Dark brown for buffalo */
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .option-header:hover {
+            background-color: green;
+        }
+        
+        .option-content {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+        }
+        
+        .option.active .option-content {
+            padding: 15px;
+            max-height: 1000px;
+        }
+        
+        .rescue-steps {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        .rescue-steps li {
+            margin-bottom: 8px;
+        }
+        
+        .pdf-container {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #EFEBE9; /* Light beige background */
+            border-radius: 8px;
+            border: 1px dashed green;
+        }
+        
+        .pdf-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color:red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .pdf-link:hover {
+            background-color: red;
+        }
+        
+        .arrow {
+            transition: transform 0.3s;
+            font-size: 14px;
+        }
+        
+        .active .arrow {
+            transform: rotate(90deg);
+        }
+        
+        .emergency-contact {
+            background-color: #EFEBE9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 4px solid #5D4037;
+        }
+        
+        .warning {
+            color: #D32F2F;
+            font-weight: bold;
+        }
+        
+        .buffalo-icon {
+            font-size: 24px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1><span class="buffalo-icon">🐃</span> Buffalo Rescue Guide</h1>
+    
+    <div class="option" id="optionA">
+        <div class="option-header">
+            <span>🚑 Injured Buffalo Rescue</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p class="warning">⚠ Buffaloes are powerful and unpredictable—never approach without professionals!</p>
+            <p><strong>First aid for injured buffaloes:</strong></p>
+            <ol class="rescue-steps">
+                <li>Assess from a safe distance—look for limping, bleeding, or labored breathing</li>
+                <li>Call wildlife/animal control immediately—do NOT attempt to handle alone</li>
+                <li>For bleeding: use clean towels (if safe) but avoid direct contact</li>
+                <li>Keep other animals/people away—buffaloes may charge when stressed</li>
+                <li>Provide water if possible but do not approach</li>
+            </ol>
+            <div class="emergency-contact">
+                <strong>Emergency Contacts:</strong><br>
+                Wildlife Rescue: [Local Number]<br>
+                Buffalo Conservation Groups: [National Hotline]
+            </div>
+        </div>
+    </div>
+    
+    <div class="option" id="optionB">
+        <div class="option-header">
+            <span>🔥 Heat Stress or Dehydration</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Signs of heat stress in buffaloes:</strong></p>
+            <ol class="rescue-steps">
+                <li>Excessive panting, drooling, or lethargy</li>
+                <li>Seek shade and provide water in a wide, shallow container</li>
+                <li>Use sprinklers to cool the ground (buffaloes wallow to regulate temperature)</li>
+                <li>Avoid cold water shock—use slightly cool water instead</li>
+                <li>Monitor for signs of heatstroke (collapse, seizures)</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionC">
+        <div class="option-header">
+            <span>🚗 Buffalo on Road or Trapped</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Helping a buffalo in traffic or stuck:</strong></p>
+            <ol class="rescue-steps">
+                <li>Alert authorities immediately—buffaloes can cause severe accidents</li>
+                <li>Create a barrier with vehicles (park diagonally with hazards on)</li>
+                <li>Do NOT honk or make loud noises—buffaloes may panic and charge</li>
+                <li>If trapped in mud/water: call professionals with proper equipment</li>
+                <li>Never attempt to pull out a stuck buffalo—risk of injury</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionD">
+        <div class="option-header">
+            <span>🐄 Domestic Buffalo Care</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Rescuing abandoned or mistreated domestic buffaloes:</strong></p>
+            <ol class="rescue-steps">
+                <li>Check for tags or brands—contact local farmers if identified</li>
+                <li>Provide fresh water and high-fiber feed (hay, grass)</li>
+                <li>Buffaloes need wallowing areas—ensure access to mud/water</li>
+                <li>Separate injured/sick buffaloes from the herd</li>
+                <li>Contact livestock rescue organizations for long-term care</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionE">
+        <div class="option-header">
+            <span>⚠ Aggressive Buffalo Handling</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Dealing with an aggressive buffalo:</strong></p>
+            <ol class="rescue-steps">
+                <li>Never turn your back or run—back away slowly</li>
+                <li>Use barriers (trees, vehicles) to protect yourself</li>
+                <li>If charged, stand behind a solid object or climb to safety</li>
+                <li>Buffaloes may bluff charge—stay calm and avoid sudden movements</li>
+                <li>Call wildlife experts immediately—do NOT attempt to handle</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="pdf-container">
+        <h3>📚 Download the Complete Buffalo Rescue Guide</h3>
+        <p>Includes:</p>
+        <ul style="text-align: left; display: inline-block; margin: 10px auto;">
+            <li>🩹 Buffalo-Specific First Aid</li>
+            <li>📞 Wildlife & Livestock Emergency Contacts</li>
+            <li>⚠ Safety Protocols for Handling Buffaloes</li>
+            <li>💧 Hydration & Wallowing Needs</li>
+            <li>🌿 Proper Buffalo Diet During Recovery</li>
+        </ul>
+        <a href="https://humanepro.org/sites/default/files/documents/rescue-best-practice-guide.pdf" class="pdf-link" target="_blank">Download Full Buffalo Rescue PDF</a>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.option-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const option = header.parentElement;
+                option.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

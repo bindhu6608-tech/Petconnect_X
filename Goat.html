@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goat Rescue Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .option {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .option-header {
+            background-color:green; /* Earthy brown for goats */
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .option-header:hover {
+            background-color: green;
+        }
+        
+        .option-content {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+        }
+        
+        .option.active .option-content {
+            padding: 15px;
+            max-height: 1000px;
+        }
+        
+        .rescue-steps {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        .rescue-steps li {
+            margin-bottom: 8px;
+        }
+        
+        .pdf-container {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #EFEBE9; /* Light beige background */
+            border-radius: 8px;
+            border: 1px dashed green;
+        }
+        
+        .pdf-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .pdf-link:hover {
+            background-color:red;
+        }
+        
+        .arrow {
+            transition: transform 0.3s;
+            font-size: 14px;
+        }
+        
+        .active .arrow {
+            transform: rotate(90deg);
+        }
+        
+        .emergency-contact {
+            background-color: #EFEBE9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 4px solid #8D6E63;
+        }
+        
+        .warning {
+            color: #D32F2F;
+            font-weight: bold;
+        }
+        
+        .goat-icon {
+            font-size: 24px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1><span class="goat-icon">🐐</span> Goat Rescue Guide</h1>
+    
+    <div class="option" id="optionA">
+        <div class="option-header">
+            <span>🚑 Injured Goat Rescue</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p class="warning">⚠ Goats may headbutt when scared - approach from the side!</p>
+            <p><strong>First aid for injured goats:</strong></p>
+            <ol class="rescue-steps">
+                <li>Approach calmly while speaking softly - avoid direct eye contact</li>
+                <li>Use a towel to gently restrain the head before handling</li>
+                <li>Check for wounds, limping, or labored breathing</li>
+                <li>For bleeding: apply pressure with clean gauze</li>
+                <li>Check for bloat (swollen left side) - emergency condition</li>
+                <li>Transport in a well-ventilated carrier with non-slip flooring</li>
+            </ol>
+            <div class="emergency-contact">
+                <strong>Emergency Contacts:</strong><br>
+                Goat Sanctuary Hotline: (555) GOAT-HELP<br>
+                Livestock Vet Emergency: [Your Local Number]
+            </div>
+        </div>
+    </div>
+    
+    <div class="option" id="optionB">
+        <div class="option-header">
+            <span>🌿 Poisoning or Toxic Plant Ingestion</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Signs of poisoning:</strong></p>
+            <ol class="rescue-steps">
+                <li>Drooling, diarrhea, or sudden collapse</li>
+                <li>Identify the plant if possible (take photos)</li>
+                <li>Call poison control immediately - do NOT induce vomiting</li>
+                <li>Provide activated charcoal if advised by vet</li>
+                <li>Keep goat warm and quiet while awaiting help</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionC">
+        <div class="option-header">
+            <span>🏞 Stuck or Entangled Goat</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Rescuing a trapped goat:</strong></p>
+            <ol class="rescue-steps">
+                <li>Assess the situation safely - goats often get heads/horns stuck</li>
+                <li>Use wire cutters for fencing (protect yourself from kicks)</li>
+                <li>For high places: place straw bales below as cushion</li>
+                <li>Check for injuries after freeing - goats may hide pain</li>
+                <li>Provide water and monitor for shock</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionD">
+        <div class="option-header">
+            <span>🤰 Kidding (Birthing) Emergency</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>When to intervene in birth:</strong></p>
+            <ol class="rescue-steps">
+                <li>Normal labor lasts 30 min-2 hours per kid</li>
+                <li>Intervene if: no progress after 30 min of active pushing</li>
+                <li>Clean hands thoroughly before any assistance</li>
+                <li>Only pull when doe pushes - never force</li>
+                <li>Call vet immediately for malpresentation (wrong positioning)</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionE">
+        <div class="option-header">
+            <span>🐐 Feral or Abandoned Baby Goat</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Caring for orphaned kids:</strong></p>
+            <ol class="rescue-steps">
+                <li>Check if mother is nearby (don't assume abandonment)</li>
+                <li>Keep warm with heating pad (on low, under towels)</li>
+                <li>Feed goat milk replacer (never cow milk) every 4 hours</li>
+                <li>Stimulate to urinate/defecate with warm damp cloth</li>
+                <li>Contact goat rescue for long-term care</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="pdf-container">
+        <h3>📚 Download the Complete Goat Rescue Guide</h3>
+        <p>Includes:</p>
+        <ul style="text-align: left; display: inline-block; margin: 10px auto;">
+            <li>🩹 Goat-Specific First Aid</li>
+            <li>☠ Common Poisonous Plants</li>
+            <li>🤱 Bottle-Feeding Instructions</li>
+            <li>⚠ Horn/Head Entanglement Solutions</li>
+            <li>🏥 Caprine Disease Reference</li>
+        </ul>
+        <a href="https://humanepro.org/sites/default/files/documents/rescue-best-practice-guide.pdf" class="pdf-link" target="_blank">Download Full Goat Rescue PDF</a>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.option-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const option = header.parentElement;
+                option.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

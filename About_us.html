@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PetConnectX</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #12e912;
+            --secondary-color: #f8f9fc;
+            --accent-color: #f6c23e;
+            --dark-color: #020f02;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(11, 203, 56, 0.8), rgba(48, 223, 35, 0.8)), 
+                        url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .mission-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+            margin: 50px 0;
+        }
+        
+        .team-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .team-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+            color: var(--dark-color);
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .btn-accent:hover {
+            background-color: #e0b43a;
+            color: white;
+        }
+        
+        .feature-card {
+            border: none;
+            border-radius: 10px;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            height: 100%;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">About PetConnectX</h1>
+            <p class="lead fs-4">A heart-driven platform built to support pets and stray animals in emergencies</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="container mb-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="fw-bold mb-4">Our Story</h2>
+                <p class="lead">PetConnectX was born out of a simple yet powerful idea: no pet should suffer because help isn't nearby.</p>
+                <p>Founded in 2020 by a group of animal lovers and tech enthusiasts, we noticed that during emergencies, pet owners often struggled to find quick, reliable help for their furry friends. Similarly, good Samaritans who wanted to help stray animals didn't always know where to turn.</p>
+                <p>We combined our passion for animals with technology to create a platform that bridges these gaps. What started as a small local initiative has now grown into a nationwide network of pet lovers, veterinarians, and volunteers all working together to make sure every paw gets the care it deserves.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4">Our Mission</h2>
+                    <p class="lead mb-0">To create a compassionate support network where every paw gets the care it deserves—fast, efficient, and from the heart.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="container mb-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">How We Help</h2>
+            <p class="lead text-muted">Our key features designed to support pets in need</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h4>Emergency Vet Locator</h4>
+                    <p>Quickly track nearby animal clinics or hospitals with real-time availability and directions.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h4>Quick Medication Guide</h4>
+                    <p>Instant access to first-aid tips and pet-friendly medications with dosage calculators.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h4>Pet Rescue Alerts</h4>
+                    <p>Raise alerts for injured, abandoned, or lost animals in your neighborhood.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>Animal Welfare Directory</h4>
+                    <p>Find shelters, NGOs, helplines, and resources categorized by location and services.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Community Page</h4>
+                    <p>A digital notice board to reunite pets with their families or save a life!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="container mb-5 py-4">
+        <div class="row text-center g-4">
+            <div class="col-md-3">
+                <div class="p-4 bg-white rounded shadow">
+                    <div class="stat-number">5,000+</div>
+                    <div class="stat-label">Pets Helped</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 bg-white rounded shadow">
+                    <div class="stat-number">1,200+</div>
+                    <div class="stat-label">Vet Partners</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 bg-white rounded shadow">
+                    <div class="stat-number">3,500+</div>
+                    <div class="stat-label">Volunteers</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-4 bg-white rounded shadow">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Cities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="container mb-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Meet Our Team</h2>
+            <p class="lead text-muted">The passionate people behind PetConnectX</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="team-card text-center">
+                    <img src="CHAITHANYA.jpg" alt="Team Member" class="team-img w-100">
+                    <div class="p-4">
+                        <h5>K CHAITHANYA</h5>
+                        <p class="text-muted">CEO</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="text-primary"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="team-card text-center">
+                    <img src= "Vaishnav.jpg" alt="Team Member" class="team-img w-100">
+                    <div class="p-4">
+                        <h5>B VAISHNAVI</h5>
+                        <p class="text-muted">CTO</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="text-primary"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="team-card text-center">
+                    <img src="Vaibhav.jpg" alt="Team Member" class="team-img w-100">
+                    <div class="p-4">
+                        <h5>A VAIBHAVI</h5>
+                        <p class="text-muted">Head of Veterinary Relations</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="text-primary"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="team-card text-center">
+                    <img src="Bindhu.jpg" alt="Team Member" class="team-img w-100">
+                    <div class="p-4">
+                        <h5>B BINDHU</h5>
+                        <p class="text-muted">Chief Operating Officer</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="text-primary"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="team-card text-center">
+                    <img src="Ashwith.jpg" alt="Team Member" class="team-img w-100">
+                    <div class="p-4">
+                        <h5>ASHWITHA PRIYA</h5>
+                        <p class="text-muted">Chief Operating Officer</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="text-primary"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="container mb-5">
+        <div class="bg-primary text-white rounded p-5 text-center">
+            <h2 class="fw-bold mb-4">Join Our Mission</h2>
+            <p class="lead mb-4">Whether you're a pet owner, veterinarian, or just an animal lover, there's a place for you in our community.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#" class="btn btn-accent btn-lg">Become a Volunteer</a>
+                <a href="#" class="btn btn-outline-light btn-lg">Partner With Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-4"><i class="fas fa-paw me-2"></i>PetConnectX</h5>
+                    <p>Helping Paws in Need. Fast, reliable emergency support for pets and stray animals.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Community</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Emergency Vet Locator</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Medication Guide</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Volunteer Connect</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Rescue Alerts</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Welfare Directory</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="fw-bold mb-4">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Pet Street, Animal City</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> help@petconnectx.com</li>
+                        <li class="mb-2"><i class="fas fa-clock me-2"></i> 24/7 Emergency Support</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 PetConnectX. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Made with <i class="fas fa-heart text-danger"></i> for animals</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple animation for stats counting up
+        document.addEventListener('DOMContentLoaded', function() {
+            const stats = document.querySelectorAll('.stat-number');
+            
+            stats.forEach(stat => {
+                const target = parseInt(stat.textContent.replace(/[^0-9]/g, ''));
+                const suffix = stat.textContent.replace(/[0-9]/g, '');
+                let current = 0;
+                const increment = target / 50;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        clearInterval(timer);
+                        current = target;
+                    }
+                    stat.textContent = Math.floor(current) + suffix;
+                }, 20);
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

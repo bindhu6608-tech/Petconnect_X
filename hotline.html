@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Hotline</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-red-50 flex items-center justify-center min-h-screen">
+  <div class="bg-white shadow-xl rounded-2xl p-8 max-w-md w-full text-center">
+    <h1 class="text-3xl font-bold text-red-600 mb-4">Emergency Hotline</h1>
+    <p class="text-gray-700 mb-6">Call our 24/7 emergency hotline:</p>
+    <a href="tel:1800-RESCUE-NOW"
+       id="mainHotline"
+       class="text-2xl font-semibold text-white bg-red-600 hover:bg-red-700 px-6 py-3 rounded-xl shadow-md transition block mx-auto mb-4">
+      1800-RESCUE-NOW
+    </a>
+    <p class="text-sm text-gray-500 mb-4">Available 24 hours a day, 7 days a week.</p>
+
+    <!-- Hidden section for your emergency numbers -->
+    <div id="ourNumbers" class="hidden mt-6 text-left">
+      <h2 class="text-lg font-semibold text-red-500 mb-2">Our Emergency Contact Numbers:</h2>
+      <ul id="numberList" class="space-y-2 text-gray-700 list-decimal list-inside"></ul>
+    </div>
+  </div>
+
+  <script>
+    const hotline = document.getElementById('mainHotline');
+    const numberSection = document.getElementById('ourNumbers');
+    const numberList = document.getElementById('numberList');
+
+    const emergencyNumbers = [
+      '8639497883',
+      '6304864248',
+      '9398224620',
+      '8919176294',
+      '8179474888'
+    ];
+
+   hotline.addEventListener('click', (e) => {
+  e.preventDefault(); // prevent tel: link
+  numberList.innerHTML = '';
+
+  emergencyNumbers.forEach(num => {
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="tel:+91${num}" class="text-blue-600 underline">+91 ${num}</a>`;
+    numberList.appendChild(li);
+  });
+
+  numberSection.classList.remove('hidden');
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Rescue Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .option {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .option-header {
+            background-color: green; /* Red for urgency */
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .option-header:hover {
+            background-color: green;
+        }
+        
+        .option-content {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+        }
+        
+        .option.active .option-content {
+            padding: 15px;
+            max-height: 1000px;
+        }
+        
+        .rescue-steps {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        .rescue-steps li {
+            margin-bottom: 8px;
+        }
+        
+        .pdf-container {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #fdeaea; /* Light red background */
+            border-radius: 8px;
+            border: 1px dashed #e74c3c;
+        }
+        
+        .pdf-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .pdf-link:hover {
+            background-color: #c0392b;
+        }
+        
+        .arrow {
+            transition: transform 0.3s;
+            font-size: 14px;
+        }
+        
+        .active .arrow {
+            transform: rotate(90deg);
+        }
+        
+        .emergency-contact {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .warning {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🐶 Dog Rescue Guide</h1>
+    
+    <div class="option" id="optionA">
+        <div class="option-header">
+            <span>🚑 Injured Dog Rescue</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p class="warning">⚠️ Always approach an injured dog carefully—they may bite out of fear or pain.</p>
+            <p><strong>First aid steps for injured dogs:</strong></p>
+            <ol class="rescue-steps">
+                <li>Stay calm and speak softly to avoid startling the dog.</li>
+                <li>Check for bleeding, broken bones, or signs of pain.</li>
+                <li>If the dog is aggressive, use a blanket or towel to gently restrain them.</li>
+                <li>Apply pressure to stop bleeding with a clean cloth.</li>
+                <li>Do NOT attempt to set broken bones—stabilize and transport carefully.</li>
+                <li>Call a vet immediately.</li>
+            </ol>
+            <div class="emergency-contact">
+                <strong>Emergency Contacts:</strong><br>
+                ASPCA Poison Control: (888) 426-4435<br>
+                24/7 Emergency Vet: [Your Local Vet Number]
+            </div>
+        </div>
+    </div>
+    
+    <div class="option" id="optionB">
+        <div class="option-header">
+            <span>🔥 Dog in Heat or Fire Emergency</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>If a dog is overheating or in a fire:</strong></p>
+            <ol class="rescue-steps">
+                <li>Move the dog to a shaded or cool area.</li>
+                <li>Offer small sips of <strong>room-temperature water</strong> (not ice-cold).</li>
+                <li>Use a wet towel to cool paws, belly, and ears.</li>
+                <li>Watch for signs of heatstroke: excessive panting, drooling, vomiting.</li>
+                <li>In a fire, <strong>do not risk your life</strong>—call firefighters.</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionC">
+        <div class="option-header">
+            <span>💧 Water Rescue (Drowning Dog)</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>How to save a drowning dog:</strong></p>
+            <ol class="rescue-steps">
+                <li>Reach with a pole, leash, or floatation device first.</li>
+                <li>If entering water, approach from the side to avoid panic.</li>
+                <li>Support the dog’s body—<strong>never lift by the collar</strong>.</li>
+                <li>Check for water in lungs—hold small dogs upside down briefly.</li>
+                <li>Wrap in a dry towel and keep warm.</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionD">
+        <div class="option-header">
+            <span>🚗 Stray or Hit-by-Car Dog</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Helping a dog on the road:</strong></p>
+            <ol class="rescue-steps">
+                <li>Park safely with hazard lights on.</li>
+                <li>Use caution—injured dogs may bite.</li>
+                <li>If the dog can move, guide them to safety with food or gentle calls.</li>
+                <li>For severely injured dogs, <strong>call animal control or a vet</strong>.</li>
+                <li>Check for a microchip at the nearest shelter.</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="pdf-container">
+        <h3>📚 Download the Complete Dog Rescue Guide</h3>
+        <p>Includes:</p>
+        <ul style="text-align: left; display: inline-block; margin: 10px auto;">
+            <li>🩹 Dog First Aid Techniques</li>
+            <li>📞 Emergency Contacts (Vets, Shelters, Poison Control)</li>
+            <li>⚠️ Safety Tips for Rescuers</li>
+            <li>🖼️ Illustrations for Proper Handling</li>
+        </ul>
+        <a href=https://humanepro.org/sites/default/files/documents/rescue-best-practice-guide.pdf class="pdf-link" target="_blank">Download Full Dog Rescue PDF</a>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.option-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const option = header.parentElement;
+                option.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

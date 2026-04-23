@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horse Rescue Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #8D6E63; /* Brown */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .option {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .option-header {
+            background-color: green; /* Dark Brown */
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .option-header:hover {
+            background-color: green;
+        }
+        
+        .option-content {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+        }
+        
+        .option.active .option-content {
+            padding: 15px;
+            max-height: 1000px;
+        }
+        
+        .rescue-steps {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        .rescue-steps li {
+            margin-bottom: 8px;
+        }
+        
+        .pdf-container {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #EFEBE9; /* Light Brown */
+            border-radius: 8px;
+            border: 1px dashed #8D6E63;
+        }
+        
+        .pdf-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color:red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .pdf-link:hover {
+            background-color:red;
+        }
+        
+        .arrow {
+            transition: transform 0.3s;
+            font-size: 14px;
+        }
+        
+        .active .arrow {
+            transform: rotate(90deg);
+        }
+        
+        .emergency-contact {
+            background-color: #EFEBE9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 4px solid #8D6E63;
+        }
+        
+        .warning {
+            color: #D84315;
+            font-weight: bold;
+        }
+        
+        .horse-icon {
+            font-size: 24px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1><span class="horse-icon">🐴</span> Horse Rescue Guide</h1>
+    
+    <div class="option" id="optionA">
+        <div class="option-header">
+            <span>🚑 Injured Horse</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p class="warning">⚠ Approach injured horses with extreme caution - they may panic when in pain!</p>
+            <p><strong>First aid for injured horses:</strong></p>
+            <ol class="rescue-steps">
+                <li>Assess the situation safely before approaching</li>
+                <li>Check for bleeding, lameness, or labored breathing</li>
+                <li>For wounds: clean gently with saline solution</li>
+                <li>Apply pressure to stop bleeding (use clean cloth)</li>
+                <li>Keep the horse calm and still if possible</li>
+                <li>Contact an equine veterinarian immediately</li>
+            </ol>
+            <div class="emergency-contact">
+                <strong>Emergency Contacts:</strong><br>
+                Equine Emergency Hotline: (888) 555-6789<br>
+                Local Large Animal Rescue: [Your Local Number]
+            </div>
+        </div>
+    </div>
+    
+    <div class="option" id="optionB">
+        <div class="option-header">
+            <span>🏞 Trapped Horse</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Rescuing a trapped horse:</strong></p>
+            <ol class="rescue-steps">
+                <li>Assess the situation for immediate dangers</li>
+                <li>Keep the horse calm by speaking softly</li>
+                <li>If in water/mud, place boards or branches for footing</li>
+                <li>For fence entanglements, use bolt cutters carefully</li>
+                <li>Have a halter and lead rope ready for control</li>
+                <li>Call for professional help if needed</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionC">
+        <div class="option-header">
+            <span>🍎 Malnourished Horse</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Rehabilitating underweight horses:</strong></p>
+            <ol class="rescue-steps">
+                <li>Provide clean, fresh water at all times</li>
+                <li>Start with high-quality hay (small frequent meals)</li>
+                <li>Introduce concentrated feeds gradually</li>
+                <li>Supplement with electrolytes if needed</li>
+                <li>Monitor body condition weekly</li>
+                <li>Check teeth for problems preventing eating</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionD">
+        <div class="option-header">
+            <span>🤒 Sick Horse Signs</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Emergency symptoms:</strong></p>
+            <ol class="rescue-steps">
+                <li>Colic signs (pawing, rolling, lack of manure)</li>
+                <li>Labored breathing or nasal discharge</li>
+                <li>Inability to stand</li>
+                <li>Severe diarrhea or no feces for 24+ hours</li>
+                <li>High fever (over 101.5°F)</li>
+                <li>Neurological symptoms (staggering, head pressing)</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionE">
+        <div class="option-header">
+            <span>🐴 Abandoned Foal</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Caring for orphaned foals:</strong></p>
+            <ol class="rescue-steps">
+                <li>Keep warm (critical for newborns)</li>
+                <li>Feed mare's milk replacer every 1-2 hours</li>
+                <li>Ensure proper nursing position</li>
+                <li>Stimulate to urinate/defecate if very young</li>
+                <li>Introduce creep feed at 2-3 weeks old</li>
+                <li>Provide companionship (another gentle horse)</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="pdf-container">
+        <h3>📚 Download the Complete Horse Rescue Guide</h3>
+        <p>Includes:</p>
+        <ul style="text-align: left; display: inline-block; margin: 10px auto;">
+            <li>🩹 Equine First Aid Kit Checklist</li>
+            <li>⚕ Vital Signs Reference Chart</li>
+            <li>⚠ Toxic Plants List</li>
+            <li>📅 Foal Development Timeline</li>
+            <li>🏥 Common Horse Illness Identification</li>
+            <li>🍎 Feeding Guidelines for Recovery</li>
+        </ul>
+        <a href="https://humanepro.org/sites/default/files/documents/rescue-best-practice-guide.pdf " class="pdf-link" target="_blank">Download Full Horse Rescue PDF</a>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.option-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const option = header.parentElement;
+                option.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

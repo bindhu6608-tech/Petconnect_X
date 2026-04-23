@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamster Rescue Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .option {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .option-header {
+            background-color: green; /* Hamster tan */
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .option-header:hover {
+            background-color: green;
+        }
+        
+        .option-content {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+        }
+        
+        .option.active .option-content {
+            padding: 15px;
+            max-height: 1000px;
+        }
+        
+        .rescue-steps {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        .rescue-steps li {
+            margin-bottom: 8px;
+        }
+        
+        .pdf-container {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #FFF8E1; /* Light hamster bedding color */
+            border-radius: 8px;
+            border: 1px dashed #D2B48C;
+        }
+        
+        .pdf-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .pdf-link:hover {
+            background-color: red;
+        }
+        
+        .arrow {
+            transition: transform 0.3s;
+            font-size: 14px;
+        }
+        
+        .active .arrow {
+            transform: rotate(90deg);
+        }
+        
+        .emergency-contact {
+            background-color: #FFF8E1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 4px solid #D2B48C;
+        }
+        
+        .warning {
+            color: #E65100;
+            font-weight: bold;
+        }
+        
+        .hamster-icon {
+            font-size: 24px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1><span class="hamster-icon">🐹</span> Hamster Rescue Guide</h1>
+    
+    <div class="option" id="optionA">
+        <div class="option-header">
+            <span>🚑 Injured Hamster</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p class="warning">⚠ Hamsters hide pain well - handle gently as they're fragile!</p>
+            <p><strong>First aid for injured hamsters:</strong></p>
+            <ol class="rescue-steps">
+                <li>Scoop up gently in cupped hands (never grab from above)</li>
+                <li>Check for bleeding, limping, or labored breathing</li>
+                <li>For wounds: clean with saline solution (no alcohol/hydrogen peroxide)</li>
+                <li>Keep warm (78-80°F) - cold stress can be fatal</li>
+                <li>Transport in small carrier with familiar bedding</li>
+                <li>See exotic vet within 24 hours for any injury</li>
+            </ol>
+            <div class="emergency-contact">
+                <strong>Emergency Contacts:</strong><br>
+                ASPCA Small Pet Hotline: (888) 426-4435<br>
+                Exotic Vet Finder: [Your Local Number]
+            </div>
+        </div>
+    </div>
+    
+    <div class="option" id="optionB">
+        <div class="option-header">
+            <span>🏠 Escaped Hamster</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Finding a lost hamster:</strong></p>
+            <ol class="rescue-steps">
+                <li>Close all doors and block gaps under furniture</li>
+                <li>Place cage on floor with food/water inside</li>
+                <li>Set up "bucket trap" (stairs of books leading to deep bucket with bedding)</li>
+                <li>Listen for scratching at night when most active</li>
+                <li>Check warm places (behind appliances, in closets)</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionC">
+        <div class="option-header">
+            <span>🍽 Malnourished/Dehydrated</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Helping underfed hamsters:</strong></p>
+            <ol class="rescue-steps">
+                <li>Offer water via syringe (drip on lips if not drinking)</li>
+                <li>Provide plain oatmeal or baby food (no onion/garlic)</li>
+                <li>Introduce new foods slowly to avoid digestive upset</li>
+                <li>Check teeth - overgrown teeth prevent eating</li>
+                <li>Weigh daily to monitor progress</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionD">
+        <div class="option-header">
+            <span>🤒 Sick Hamster Signs</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Emergency symptoms:</strong></p>
+            <ol class="rescue-steps">
+                <li>Wet tail (diarrhea-stained rear) - fatal without treatment</li>
+                <li>Lethargy lasting more than 24 hours</li>
+                <li>Loud/wheezing breathing (respiratory infection)</li>
+                <li>Lumps (abscesses or tumors common in older hamsters)</li>
+                <li>Sudden weight loss or hunched posture</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionE">
+        <div class="option-header">
+            <span>🐹 Abandoned Baby Hamsters</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Caring for orphans:</strong></p>
+            <ol class="rescue-steps">
+                <li>Do NOT handle pinkies - mother may reject if human-scented</li>
+                <li>Keep nest warm (95°F for newborns, reduce 5°F weekly)</li>
+                <li>Feed puppy milk replacer via paintbrush every 2 hours</li>
+                <li>Stimulate to urinate/defecate with warm damp cotton ball</li>
+                <li>Introduce solid food at 2 weeks (ground pellets)</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="pdf-container">
+        <h3>📚 Download the Complete Hamster Rescue Guide</h3>
+        <p>Includes:</p>
+        <ul style="text-align: left; display: inline-block; margin: 10px auto;">
+            <li>🩹 Hamster First Aid Kit Checklist</li>
+            <li>🏠 Escape-Proof Habitat Designs</li>
+            <li>⚠ Toxic Foods List</li>
+            <li>📅 Age Milestones for Babies</li>
+            <li>🏥 Common Illness Identification Chart</li>
+        </ul>
+        <a href="https://humanepro.org/sites/default/files/documents/rescue-best-practice-guide.pdf" class="pdf-link" target="_blank">Download Full Hamster Rescue PDF</a>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.option-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const option = header.parentElement;
+                option.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

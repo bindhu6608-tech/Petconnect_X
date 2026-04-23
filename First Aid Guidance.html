@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal First Aid Guide - Emergency Pet Care</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .header {
+            background: #4CAF50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .search-box {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 1rem;
+            border: 2px solid #4CAF50;
+            border-radius: 25px;
+            font-size: 1.1rem;
+        }
+
+        .emergency-alert {
+            background: #ff4444;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        .injury-card {
+            background: white;
+            margin: 1rem 0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .injury-card h3 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+
+        .step-list {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+        }
+
+        .step-list li {
+            margin-bottom: 1rem;
+        }
+
+        .warning {
+            color: #ff4444;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .accordion {
+            cursor: pointer;
+            padding: 1rem;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            background: #4CAF50;
+            color: white;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+        }
+
+        .active, .accordion:hover {
+            background: #45a049;
+        }
+
+        .panel {
+            padding: 0 1rem;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .timer {
+            background: #ffe082;
+            padding: 1rem;
+            text-align: center;
+            margin: 1rem 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            input[type="text"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Animal First Aid Guide</h1>
+        <p>Immediate emergency care instructions for common injuries</p>
+    </header>
+
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="Search for injury or symptom..." id="searchInput">
+        </div>
+
+        <div class="emergency-alert">
+            <i class="fas fa-exclamation-triangle"></i> Always contact a veterinarian after administering first aid!
+        </div>
+
+        <div class="timer" id="cprTimer">
+            <i class="fas fa-heartbeat"></i> CPR Cycle Timer: 
+            <span id="timerDisplay">00:00</span>
+        </div>
+
+        <!-- Bleeding Injury -->
+        <button class="accordion"><i class="fas fa-tint"></i> Bleeding/Wounds</button>
+        <div class="panel">
+            <div class="injury-card">
+                <h3>Immediate First Aid Steps:</h3>
+                <ol class="step-list">
+                    <li>Apply direct pressure with clean cloth or gauze</li>
+                    <li>Elevate the injured area if possible</li>
+                    <li>Maintain pressure for at least 5 minutes</li>
+                    <li>Apply cold compress around wound (not directly on)</li>
+                </ol>
+                <div class="warning">
+                    <i class="fas fa-exclamation-circle"></i> Do NOT use tourniquet unless severe arterial bleeding
+                </div>
+            </div>
+        </div>
+
+        <!-- Burn Injury -->
+        <button class="accordion"><i class="fas fa-fire"></i> Burns/Scalds</button>
+        <div class="panel">
+            <div class="injury-card">
+                <h3>Emergency Treatment:</h3>
+                <ol class="step-list">
+                    <li>Cool with room-temperature water for 10-15 minutes</li>
+                    <li>Cover with clean, non-stick dressing</li>
+                    <li>Do NOT apply ice or ointments</li>
+                    <li>Prevent animal from licking the burn</li>
+                </ol>
+                <div class="warning">
+                    Chemical Burns: Flush with water for 20 minutes
+                </div>
+            </div>
+        </div>
+
+        <!-- Fracture -->
+        <button class="accordion"><i class="fas fa-bone"></i> Suspected Fracture</button>
+        <div class="panel">
+            <div class="injury-card">
+                <h3>Immediate Care:</h3>
+                <ol class="step-list">
+                    <li>Restrict movement immediately</li>
+                    <li>Create makeshift splint with cardboard or magazine</li>
+                    <li>Apply cold pack to reduce swelling</li>
+                    <li>Transport carefully using rigid surface</li>
+                </ol>
+                <div class="warning">
+                    Never try to realign the bone yourself
+                </div>
+            </div>
+        </div>
+
+        <!-- Choking -->
+        <button class="accordion"><i class="fas fa-head-side-virus"></i> Choking</button>
+        <div class="panel">
+            <div class="injury-card">
+                <h3>Emergency Response:</h3>
+                <ol class="step-list">
+                    <li>Check mouth for visible obstruction</li>
+                    <li>Perform modified Heimlich maneuver:
+                        <ul>
+                            <li>Small animals: Hold upside down</li>
+                            <li>Large animals: Abdominal thrusts</li>
+                        </ul>
+                    </li>
+                    <li>Begin CPR if breathing stops</li>
+                </ol>
+                <div class="warning">
+                    Risk of bite injuries - use caution
+                </div>
+            </div>
+        </div>
+
+        <!-- Poisoning -->
+        <button class="accordion"><i class="fas fa-skull-crossbones"></i> Poisoning</button>
+        <div class="panel">
+            <div class="injury-card">
+                <h3>Immediate Actions:</h3>
+                <ol class="step-list">
+                    <li>Identify toxin if possible</li>
+                    <li>Do NOT induce vomiting unless instructed</li>
+                    <li>Administer activated charcoal (if available)</li>
+                    <li>Collect vomit or stool sample for analysis</li>
+                </ol>
+                <div class="warning">
+                    Contact Animal Poison Control immediately: 1-888-426-4435
+                </div>
+            </div>
+        </div>
+
+        <!-- Heat Stroke -->
+        <button class="accordion"><i class="fas fa-sun"></i> Heat Stroke</button>
+        <div class="panel">
+            <div class="injury-card">
+                <h3>Emergency Cooling:</h3>
+                <ol class="step-list">
+                    <li>Move to cool area immediately</li>
+                    <li>Apply room-temperature water to body</li>
+                    <li>Use fan to enhance evaporation</li>
+                    <li>Offer small amounts of water to drink</li>
+                </ol>
+                <div class="warning">
+                    Do NOT use ice water - can cause shock
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Accordion functionality
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+
+        // Search functionality
+        document.getElementById("searchInput").addEventListener("keyup", function() {
+            const filter = this.value.toUpperCase();
+            const acc = document.getElementsByClassName("accordion");
+            
+            for (let i = 0; i < acc.length; i++) {
+                const txtValue = acc[i].textContent || acc[i].innerText;
+                acc[i].style.display = txtValue.toUpperCase().includes(filter) ? "" : "none";
+                acc[i].nextElementSibling.style.display = txtValue.toUpperCase().includes(filter) ? "" : "none";
+            }
+        });
+
+        // CPR Timer
+        let seconds = 0;
+        const timer = setInterval(function() {
+            seconds++;
+            const mins = Math.floor(seconds/60);
+            const secs = seconds % 60;
+            document.getElementById("timerDisplay").textContent = 
+                `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }, 1000);
+    </script>
+</body>
+</html>

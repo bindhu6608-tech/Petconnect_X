@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nearest Pet Care Centers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body class="bg-white min-h-screen p-6">
+  <h2 class="text-3xl font-bold mb-4 text-center">Your Current Location</h2>
+
+  <div class="bg-gray-100 p-4 rounded-lg shadow-md max-w-md mx-auto mb-6">
+    <p id="location-text" class="text-lg font-medium text-center">Fetching location...</p>
+  </div>
+
+  <div id="map" class="h-96 w-full max-w-4xl mx-auto mb-6 rounded-xl shadow-md"></div>
+
+  <script>
+    function showMap(lat, lon) {
+      document.getElementById("location-text").textContent = `Latitude: ${lat.toFixed(4)}, Longitude: ${lon.toFixed(4)}`;
+
+      const map = L.map('map').setView([lat, lon], 13);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      L.marker([lat, lon]).addTo(map).bindPopup("You are here").openPopup();
+    }
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+          showMap(lat, lon);
+        },
+        error => {
+          document.getElementById("location-text").textContent = "Error fetching location.";
+          console.error(error);
+        }
+      );
+    } else {
+      document.getElementById("location-text").textContent = "Geolocation not supported.";
+    }
+  </script>
+</body>
+</html>

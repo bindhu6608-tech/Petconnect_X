@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hen Rescue Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .option {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .option-header {
+            background-color:green; /* Warm hen-like orange */
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .option-header:hover {
+            background-color:green;
+        }
+        
+        .option-content {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+        }
+        
+        .option.active .option-content {
+            padding: 15px;
+            max-height: 1000px;
+        }
+        
+        .rescue-steps {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        .rescue-steps li {
+            margin-bottom: 8px;
+        }
+        
+        .pdf-container {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #FFF4E5; /* Eggshell-like background */
+            border-radius: 8px;
+            border: 1px dashed green;
+        }
+        
+        .pdf-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color:red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .pdf-link:hover {
+            background-color: red;
+        }
+        
+        .arrow {
+            transition: transform 0.3s;
+            font-size: 14px;
+        }
+        
+        .active .arrow {
+            transform: rotate(90deg);
+        }
+        
+        .emergency-contact {
+            background-color: #FFF4E5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 4px solid #FFB347;
+        }
+        
+        .warning {
+            color: #D35400;
+            font-weight: bold;
+        }
+        
+        .hen-icon {
+            font-size: 24px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1><span class="hen-icon">🐔</span> Hen Rescue Guide</h1>
+    
+    <div class="option" id="optionA">
+        <div class="option-header">
+            <span>🚑 Injured Hen Rescue</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p class="warning">⚠ Hens hide injuries well - check for limping, drooping wings, or abnormal posture!</p>
+            <p><strong>First aid for injured hens:</strong></p>
+            <ol class="rescue-steps">
+                <li>Approach calmly from the side (never from above like a predator)</li>
+                <li>Gently wrap in a towel, covering the eyes to reduce stress</li>
+                <li>Check for wounds, mites/lice, or breathing difficulties</li>
+                <li>For bleeding: apply cornstarch or styptic powder (never human bandages)</li>
+                <li>Separate from flock immediately (other hens may peck injuries)</li>
+                <li>Transport in a well-ventilated box with non-slip flooring</li>
+            </ol>
+            <div class="emergency-contact">
+                <strong>Emergency Contacts:</strong><br>
+                Poultry Helpline: (888) 908-3481<br>
+                Avian Vet Locator: [Your Local Poultry Rescue Number]
+            </div>
+        </div>
+    </div>
+    
+    <div class="option" id="optionB">
+        <div class="option-header">
+            <span>🌡 Heat Stress or Hypothermia</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Signs of temperature distress:</strong></p>
+            <ol class="rescue-steps">
+                <li><strong>Heat stress:</strong> Panting, wings held away from body, pale comb</li>
+                <li><strong>Hypothermia:</strong> Shivering, puffed feathers, lethargy</li>
+                <li>For overheating: offer electrolytes in water, mist legs (not body)</li>
+                <li>For cold: warm gradually with heating pad under half the enclosure</li>
+                <li>Always provide fresh water - dehydrated hens won't eat</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionC">
+        <div class="option-header">
+            <span>🏠 Abandoned or Escaped Domestic Hen</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Rescuing domestic hens:</strong></p>
+            <ol class="rescue-steps">
+                <li>Lure with scratch grains or mealworms (more effective than bread)</li>
+                <li>Use a fishing net or throw a large towel over the hen</li>
+                <li>Check for leg bands (may indicate ownership)</li>
+                <li>Provide immediate access to grit if feeding anything but commercial feed</li>
+                <li>Quarantine for 30 days before introducing to other birds</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionD">
+        <div class="option-header">
+            <span>🥚 Egg-Bound Hen Emergency</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Signs of egg-binding (life-threatening):</strong></p>
+            <ol class="rescue-steps">
+                <li>Straining, squatting frequently, tail pumping</li>
+                <li>Create a warm bath (95°F/35°C) with Epsom salts (back end only)</li>
+                <li>Apply vegetable oil around vent area</li>
+                <li>Keep in warm, dark, quiet space</li>
+                <li>Seek vet help within 2 hours - this is fatal if untreated</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="option" id="optionE">
+        <div class="option-header">
+            <span>🦊 Predator Attack Aftercare</span>
+            <span class="arrow">▶</span>
+        </div>
+        <div class="option-content">
+            <p><strong>Caring for attack survivors:</strong></p>
+            <ol class="rescue-steps">
+                <li>Check for puncture wounds (often hidden under feathers)</li>
+                <li>Clean wounds with diluted betadine (1:10 ratio with water)</li>
+                <li>Watch for shock: provide electrolytes and keep at 85°F/29°C</li>
+                <li>Predator saliva causes infection - antibiotics usually needed</li>
+                <li>Remove all remaining hens to secure location</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="pdf-container">
+        <h3>📚 Download the Complete Hen Rescue Guide</h3>
+        <p>Includes:</p>
+        <ul style="text-align: left; display: inline-block; margin: 10px auto;">
+            <li>🩹 Poultry-Specific First Aid</li>
+            <li>📞 Chicken Emergency Contacts</li>
+            <li>⚠ Biosecurity Protocols</li>
+            <li>🌾 Proper Hen Nutrition During Recovery</li>
+            <li>🏥 Common Chicken Diseases Quick Reference</li>
+        </ul>
+        <a href="https://humanepro.org/sites/default/files/documents/rescue-best-practice-guide.pdf"class="pdf-link" target="_blank">Download Full Hen Rescue PDF</a>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.option-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const option = header.parentElement;
+                option.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
